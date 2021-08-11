@@ -7,7 +7,7 @@ export default class Calculator extends React.Component {
       <div className="calc_container">
         <div className="result"><p>0</p></div>
         <div className="calc-buttons">
-          <div className="left-btn-container">
+          <div className="left-btns-container">
             <button type="button" className="left-btn">AC</button>
             <button type="button" className="left-btn">+/-</button>
             <button type="button" className="left-btn">%</button>
