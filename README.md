@@ -5,7 +5,6 @@
 
 > Started working with React
 
-![screenshot](./src/Assets/Images/Screenshots/preview1.png)
 
 ## Built With
 
@@ -39,7 +38,7 @@ Get a live preview of the project on this link
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/hunter4466/Math_magicians/issues).
+Feel free to check the issues page. [issues page](https://github.com/hunter4466/Math_magicians/issues).
 
 ## Show your support
 
