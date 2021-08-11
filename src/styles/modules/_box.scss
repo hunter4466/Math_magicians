@@ -1,0 +1,11 @@
+@mixin flexbox ($flexd: column) {
+  display: flex;
+  flex-direction: $flexd;
+  background-color: gray;
+}
+
+@mixin centerFromSize($width, $height) {
+  width: $width;
+  height: $height;
+  margin-left: $heg;
+}
