@@ -8,12 +8,14 @@
   left: 50vw;
   border-radius: 8px;
   overflow: hidden;
+
   @include flexbox;
   @include sizeAndCenter(340px,300px);
 }
 
 .calc-buttons {
   @include flexbox(row);
+
   width: 100%;
   height: 250px;
 }
@@ -38,6 +40,7 @@
 
 .right-btns-container {
   @include flexbox;
+
   width: 25%;
   height: 250px;
 }
@@ -56,7 +59,9 @@
 
 .right-btn {
   @include floatAndSize(100%,50px);
+
   background-color: rgb(232, 151, 0);
+
   @include borderStyle;
   @include commonBtnTrans;
 }

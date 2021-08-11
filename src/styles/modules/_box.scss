@@ -9,6 +9,7 @@
   height: $height;
   margin-left: $heg;
 }
+
 @mixin borderStyle() {
   border-style: solid;
   border-width: 0.5px;
