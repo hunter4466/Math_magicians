@@ -24,7 +24,7 @@ export default class Calculator extends Component {
             <button type="button" className="left-btn">.</button>
           </div>
           <div className="right-btns-container">
-            <button type="button" className="right-btn">+</button>
+            <button type="button" className="right-btn">÷</button>
             <button type="button" className="right-btn">x</button>
             <button type="button" className="right-btn">-</button>
             <button type="button" className="right-btn">+</button>
