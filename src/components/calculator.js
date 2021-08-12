@@ -1,26 +1,20 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 import updateObject from '../logic/parseUpdate';
 // eslint-disable-next-line react/prefer-stateless-function
-export default class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
+
+export default const Calculator = () => {
 
   handleClick = (buttonName) => {
     const destr = this.state;
     const updatedObject = updateObject(destr, calculate(destr, buttonName));
-    this.setState(updatedObject);
+    this.setNext;
   }
 
   render() {
-    const nowState = this.state;
+    const [next, setNext] = useState(null)
+    const [operation, setOperation] = useState(null)
+    const [total, setTotal] = useState(null)
     return (
       <div className="calc_container">
         <div className="result">
