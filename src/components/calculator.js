@@ -1,30 +1,21 @@
 import React, { Component } from 'react';
 import calculate from '../logic/calculate';
-import operate from '../logic/operate';
 import updateObject from '../logic/parseUpdate';
 // eslint-disable-next-line react/prefer-stateless-function
 export default class Calculator extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      total: 0,
+      total: null,
       next: null,
       operation: null,
     };
     this.handleClick = this.handleClick.bind(this);
-    this.handleOperation = this.handleOperation.bind(this);
   }
 
   handleClick = (buttonName) => {
     const destr = this.state;
     const updatedObject = updateObject(destr, calculate(destr, buttonName));
-    this.setState(updatedObject);
-  }
-
-  handleOperation = () => {
-    const destr2 = this.state;
-    const result = operate(destr2.total, destr2.next, destr2.operation);
-    const updatedObject = updateObject(destr2, { next: result });
     this.setState(updatedObject);
   }
 
@@ -34,6 +25,10 @@ export default class Calculator extends Component {
       <div className="calc_container">
         <div className="result">
           <p>
+            {nowState.total}
+            {' '}
+            {nowState.operation}
+            {' '}
             {nowState.next}
           </p>
         </div>
@@ -55,11 +50,11 @@ export default class Calculator extends Component {
             <button type="button" onClick={() => { this.handleClick('.'); }} className="left-btn">.</button>
           </div>
           <div className="right-btns-container">
-            <button type="button" onClick={() => { this.handleClick('+'); }} className="right-btn">+</button>
+            <button type="button" onClick={() => { this.handleClick('÷'); }} className="right-btn">÷</button>
             <button type="button" onClick={() => { this.handleClick('x'); }} className="right-btn">x</button>
             <button type="button" onClick={() => { this.handleClick('-'); }} className="right-btn">-</button>
             <button type="button" onClick={() => { this.handleClick('+'); }} className="right-btn">+</button>
-            <button type="button" onClick={this.handleOperation} className="right-btn">=</button>
+            <button type="button" onClick={() => { this.handleClick('='); }} className="right-btn">=</button>
           </div>
         </div>
       </div>
