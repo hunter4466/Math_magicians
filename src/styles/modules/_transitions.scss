@@ -1,0 +1,11 @@
+@mixin commonBtnTrans {
+  transition: ease-in-out 0.1s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}

@@ -5,6 +5,7 @@
 
 > Started working with React
 
+![screenshot](./src/images/screenshots/preview1.png)
 
 ## Built With
 
