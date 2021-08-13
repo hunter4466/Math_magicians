@@ -33,7 +33,7 @@ export default function calculate(obj, buttonName) {
       }
       return { next: buttonName };
     }
-    // If there is no operation, update next and clear the value
+    // If there is no operaton, update next and clear the value
     if (obj.next) {
       return {
         next: obj.next + buttonName,
