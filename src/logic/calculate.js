@@ -94,6 +94,9 @@ export default function calculate(obj, buttonName) {
   if (!obj.next && !obj.total) {
     return {};
   }
+  if (!obj.next) {
+    return { operation: buttonName };
+  }
 
   // User pressed an operation button and there is an existing operation
   if (obj.operation) {
@@ -105,9 +108,6 @@ export default function calculate(obj, buttonName) {
   }
 
   // The user hasn't typed a number yet, just save the operation
-  if (!obj.next) {
-    return { operation: buttonName };
-  }
 
   // save the operation and shift 'next' into 'total'
   return {
