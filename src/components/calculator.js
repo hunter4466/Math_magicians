@@ -3,18 +3,18 @@ import calculate from '../logic/calculate';
 import updateObject from '../logic/parseUpdate';
 // eslint-disable-next-line react/prefer-stateless-function
 
-export default function Calculator() {
+const Calculator = () => {
   const [nextRes, setNext] = useState(null);
   const [operationRes, setOperation] = useState(null);
   const [totalRes, setTotal] = useState(null);
 
-  function updateState(object) {
+  const updateState = (object) => {
     setNext(object.next);
     setOperation(object.operation);
     setTotal(object.total);
-  }
+  };
 
-  function handleClick(buttonName) {
+  const handleClick = (buttonName) => {
     const actObj = {
       next: nextRes,
       operation: operationRes,
@@ -22,7 +22,7 @@ export default function Calculator() {
     };
     const updatedObject = updateObject(actObj, calculate(actObj, buttonName));
     updateState(updatedObject);
-  }
+  };
   return (
     <div className="calc_container">
       <div className="result">
@@ -61,4 +61,6 @@ export default function Calculator() {
       </div>
     </div>
   );
-}
+};
+
+export default Calculator;
