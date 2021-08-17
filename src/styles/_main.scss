@@ -1,0 +1,11 @@
+@import "./modules/box";
+@import "./modules/locations";
+@import "./modules/transitions";
+
+.nav-bar{
+    @include flexbox(row);
+    background-color: red;
+    position: absolute;
+    right: 20px;
+    list-style: none;
+}
