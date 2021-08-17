@@ -14,9 +14,10 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <nav className="nav-bar">
-            <ul>
+        <div className="switch">
+          <div className="switch_header">
+            <h1 className="page_title">Math Magicians</h1>
+            <ul className="nav-bar">
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -27,8 +28,7 @@ export default class App extends Component {
                 <Link to="/quote">Quote</Link>
               </li>
             </ul>
-          </nav>
-
+          </div>
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>

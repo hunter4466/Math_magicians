@@ -1,11 +1,24 @@
 @import "./modules/box";
 @import "./modules/locations";
 @import "./modules/transitions";
-
+.switch {
+    @include flexbox();
+}
+.switch_header {
+    @include flexbox(row);
+}
+.page_title {
+    
+}
 .nav-bar{
     @include flexbox(row);
     background-color: red;
-    position: absolute;
+    position: relative;
     right: 20px;
     list-style: none;
+}
+
+.nav-bar li {
+    margin-right: 10px;
+    margin-left: 10px;
 }
