@@ -19,11 +19,17 @@ body{
     @include flexbox();
 }
 .switch_header {
+    position: relative;
+    left: -1vw;
+    top: -1.5vh;
     @include flexbox(row);
     width: 100vw;
+    height: 100px;
     align-content: space-between;
+    background: linear-gradient(180deg, rgba(212,212,212,1) 0%, rgba(255,255,255,1) 100%);
 }
 .page_title {
+    margin-left: 2vw;
     width: 100em;
     font-family: Cocogoose5 ,serif;
 }
