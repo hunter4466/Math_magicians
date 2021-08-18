@@ -8,7 +8,6 @@ const updateObject = (look, input) => {
   for (let i = 0; i < inputArray.length; i += 1) {
     inputObj[inputArray[i]] = input[inputArray[i]];
   }
-  console.log(inputObj);
   return inputObj;
 };
 
