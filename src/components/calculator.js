@@ -25,9 +25,7 @@ const Calculator = () => {
   };
   return (
     <div className="calc_main_container">
-      <div className="calc_title">
-        <h1 className="calc_title_text">Let&apos;s do some math!</h1>
-      </div>
+      <h1 className="calc_title_text">Let&apos;s do some math!</h1>
       <div className="calc_container">
         <div className="result">
           <p>
